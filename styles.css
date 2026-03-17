@@ -1,0 +1,291 @@
+/* Селектор по тегу для всей страницы */
+body {
+    font-family: 'Segoe UI';
+    background-color: #1a1a2e; 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    background-size: cover;
+    background-attachment: fixed;
+    color: #e0e0e0;
+    line-height: 1.6;   
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+
+/* Селектор по классу - основной контейнер */
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: rgba(30, 30, 40, 0.85);  /* Полупрозрачный фон блоков */
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 0 30px rgba(230, 0, 0, 0.2);
+}
+
+/* Шапка */
+/* Селектор по тегу */
+header {
+    background: linear-gradient(135deg, #2a2a3a 0%, #1a1a2a 100%);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    border-left: 5px solid #e10600;  /* Красный цвет F1 */
+    border-right: 5px solid #e10600;
+}
+
+/* Селектор по тегу h1 в header */
+header h1 {
+    color: #e10600;  /* Красный цвет */
+    font-size: 3em;
+    text-transform: uppercase;  /* Верхний регистр */
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0 0 10px 0;
+    font-weight: 800;
+}
+
+/* Селектор по тегу p в header */
+header p {
+    color: #ffffff;
+    font-size: 1.2em;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+/* Навигация */
+nav {
+    background-color: #2a2a3a;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+/* Селектор по псевдоклассу при наведении */
+nav ul li a:hover {
+    background-color: #e10600;
+    color: white;
+}
+
+/* Мейн */
+main {
+    display: inline-block;
+    width: 70%;
+    vertical-align: top;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+/* Заголовки разных уровней */
+h2 {
+    color: #e10600;
+    font-size: 2.2em;
+    text-transform: uppercase;
+    border-bottom: 2px solid #e10600;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+h3 {
+    color: #ff6b6b;
+    font-size: 1.8em;
+    text-transform: none;  /* Обычный регистр */
+    margin-bottom: 15px;
+}
+
+h4 {
+    color: #ff9999;
+    font-size: 1.4em;
+    font-style: italic;
+}
+
+/* Параграфы */
+p {
+    color: #e0e0e0;
+    font-size: 1.1em;
+    text-align: justify;
+}
+
+/* Сайдбар */
+/* Селектор по тегу */
+aside {
+    display: inline-block;
+    width: 28%;
+    vertical-align: top;
+    background: linear-gradient(145deg, #2a2a3a, #1f1f2f);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(225, 6, 0, 0.2);
+    border: 1px solid #e10600;
+    margin-left: 2%;
+    box-sizing: border-box;
+}
+
+/* Селектор по классу для фактов в сайдбаре */
+.fact-box {
+    background-color: rgba(225, 6, 0, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+aside h3, aside h4 {
+    color: #e10600;
+    margin-top: 0;
+}
+
+
+/* Основной список с кастомными маркерами */
+.custom-list {
+    list-style: none;
+    padding-left: 30px;
+}
+
+.custom-list li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 5px;
+}
+
+/* Изображения-маркеры и обтекание */
+.custom-list li::before {
+    content: '';
+    position: absolute;
+    left: -25px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    background-image: url('templates/flag.png');  /* Маркер */
+    background-size: contain;
+    float: left;  /* Обтекание маркера текстом */
+    margin-right: 8px;
+}
+
+
+/* Таблицы */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #2a2a3a;
+    margin: 20px 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th {
+    background-color: #e10600;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 12px;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #3a3a4a;
+    color: #e0e0e0;
+}
+
+/* Чередование цвета строк */
+tr:nth-child(even) {
+    background-color: #1f1f2f;
+}
+
+/* Изображения */
+img {
+    border-radius: 10px;
+    border: 3px solid #e10600;
+    transition: transform 0.3s ease;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 15px 0;
+}
+
+img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(225, 6, 0, 0.5);
+}
+
+/* Аудио */
+audio {
+    width: 100%;
+    margin: 15px 0;
+    background-color: #2a2a3a;
+    border-radius: 30px;
+}
+
+/* Подвал */
+/* Селектор по тегу */
+footer {
+    clear: both;
+    margin-top: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, #1a1a2a 0%, #0a0a1a 100%);
+    border-radius: 10px;
+    text-align: center;
+    border-top: 3px solid #e10600;
+}
+
+footer p {
+    color: #999;
+    font-size: 0.9em;
+    text-align: center;
+    margin: 5px 0;
+}
+
+/* Спец Классы */
+.highlight-text {
+    color: #ff6b6b;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.stat-value {
+    color: #e10600;
+    font-size: 1.2em;
+    font-weight: 800;
+}
+
+.legend-name {
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 2px 2px 4px #e10600;
+}
+
+
+/* Мнемоники */
+.special-char {
+    color: #e10600;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+
+/* Идентификатор */
+#top {
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Тень */
+}   
+
