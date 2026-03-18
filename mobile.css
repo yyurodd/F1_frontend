@@ -1,0 +1,58 @@
+@media screen and (max-width: 1000px) {
+    html {
+        font-size: 80px;
+    }
+
+    p, li, td, h1, h2, h3, h4, a, span, div {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+    nav ul li a {
+        font-size: 24px;
+        padding: 25px;
+        display: block;
+    }
+
+    .facts-container {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .fact-box {
+        flex: 1;
+        padding: 15px;
+        background-color: rgba(225, 6, 0, 0.1);
+        border-radius: 8px;
+        box-sizing: border-box;
+    }
+
+    .fact-box h3, .fact-box h4 {
+        font-size: 0.5rem;
+        margin: 0 0 8px 0;
+        color: #e10600;
+    }
+
+    .fact-box p {
+        font-size: 0.4rem;
+        margin: 0;
+    }
+
+    /* Таблицы */
+    table {
+        display: table;
+        width: 100%;
+        font-size: 0.3rem;
+        border-collapse: collapse;
+        margin: 15px 0;
+    }
+    
+    aside {
+        display: inline-block;
+        width: 96.5%;
+        vertical-align: top;
+    }
+
+}
