@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Энциклопедия F1 - Регистрация</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/mobile.css">
+</head>
+<body>
+    <div class="content-wrapper">
+        <header>
+            <h1>Энциклопедия Формулы-1</h1>
+            <p>Присоединяйся к сообществу фанатов королевских гонок</p>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="teams.html">Команды</a></li>
+                    <li><a href="legends.html">Легенды</a></li>
+                    <li><a href="register.html">Регистрация</a></li>
+                    <li><a href="login.html">Вход</a></li>
+                </ul>
+            </nav>
+            <hr>
+        </header>
+
+        <main class="form-page-main">
+            <div class="form-container">
+                <h2>Регистрация</h2>
+                
+                <form>
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" placeholder="example@mail.com">
+                        <div class="field-hint">Введите корректный email для входа</div>
+                    </div>
+
+                    <!-- Пароль -->
+                    <div class="form-group">
+                        <label for="password">Пароль *</label>
+                        <input type="password" id="password" name="password" placeholder="Минимум 6 символов">
+                        <div class="field-hint">Пароль должен содержать минимум 6 символов</div>
+                    </div>
+
+                    <!-- Подтверждение пароля -->
+                    <div class="form-group">
+                        <label for="confirm_password">Подтвердите пароль *</label>
+                        <input type="password" id="confirm_password" name="confirm_password" placeholder="Введите пароль еще раз">
+                    </div>
+
+                    <!-- Никнейм -->
+                    <div class="form-group">
+                        <label for="nickname">Никнейм</label>
+                        <input type="text" id="nickname" name="nickname" placeholder="Как к вам обращаться">
+                        <div class="field-hint">Можно оставить пустым — будет использован email</div>
+                    </div>
+
+                    <hr>
+
+                    <!-- Роль -->
+                    <div class="form-group">
+                        <label>Роль</label>
+                        <div class="radio-group">
+                            <label>
+                                <input type="radio" name="role" value="fan" checked> Болельщик
+                            </label>
+                            <label>
+                                <input type="radio" name="role" value="expert"> Эксперт
+                            </label>
+                        </div>
+                        <div class="field-hint">Эксперты могут публиковать аналитику</div>
+                    </div>
+
+                    <!-- Любимая команда (все 11 команд) -->
+                    <div class="form-group">
+                        <label for="team">Любимая команда</label>
+                        <select id="team" name="team">
+                            <option value="">Выберите команду</option>
+                            <option value="ferrari">Ferrari</option>
+                            <option value="mclaren">McLaren</option>
+                            <option value="redbull">Red Bull Racing</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="astonmartin">Aston Martin</option>
+                            <option value="alpine">Alpine</option>
+                            <option value="williams">Williams</option>
+                            <option value="haas">Haas</option>
+                            <option value="racingbulls">Racing Bulls (RB)</option>
+                            <option value="sauber">Sauber (Audi)</option>
+                            <option value="cadillac">Cadillac F1</option>
+                        </select>
+                    </div>
+
+                    <!-- Получать новости -->
+                    <div class="form-group">
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox" name="newsletter" checked> Получать новости и обновления
+                            </label>
+                        </div>
+                        <div class="field-hint">Раз в неделю — дайджест главных новостей F1</div>
+                    </div>
+
+                    <!-- Запомнить меня -->
+                    <div class="form-group">
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox" name="remember"> Запомнить меня
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-buttons">
+                        <button type="reset" class="btn btn-secondary">Очистить</button>
+                        <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+                    </div>
+                </form>
+
+                <hr>
+
+                <div class="form-link">
+                    Уже есть аккаунт? <a href="login.html">Войти</a>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <hr>
+            <p><a href="#top">⬆ Вернуться наверх</a></p>
+            <p>&copy; 2026 Энциклопедия F1. Все права защищены.</p>
+        </footer>
+    </div>
+</body>
+</html>
