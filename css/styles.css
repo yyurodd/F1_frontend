@@ -188,7 +188,6 @@ aside h3, aside h4 {
     content: '';
     position: absolute;
     left: -25px;
-    top: 10px;
     width: 20px;
     height: 20px;
     background-image: url('../templates/flag.png');  /* Маркер */
@@ -417,9 +416,6 @@ footer p {
 select {
     cursor: pointer;
     appearance: none;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23e10600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>');
-    background-repeat: no-repeat;
-    background-position: right 15px center;
 }
 
 /* Кнопки */
@@ -485,4 +481,104 @@ hr {
 .form-page-main {
     width: 100% !important;
     padding-right: 0 !important;
+}
+
+/* Обертка для поля */
+.input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+/* Иконка ошибки */
+.input-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    margin-top: -10px;
+    width: 20px;
+    height: 20px;
+    display: none;
+}
+
+.input-icon::after {
+    content: "!";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background: #e10600;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Показываем иконку когда поле невалидно */
+.input-wrapper input:invalid:not(:placeholder-shown) + .input-icon {
+    display: block;
+}
+
+/* Скрываем иконку когда поле валидно */
+.input-wrapper input:valid + .input-icon {
+    display: none;
+}
+
+/* Фокус для клавиатуры */
+a:focus-visible, 
+button:focus-visible, 
+input:focus-visible, 
+select:focus-visible, 
+.btn:focus-visible, 
+nav ul li a:focus-visible {
+    outline: 3px solid #e10600;
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+/* Минимальный размер кнопок и ссылок */
+.btn, 
+nav ul li a, 
+button {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Увеличиваем область клика для чекбоксов и радио */
+.checkbox-group label, 
+.radio-group label {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 8px;
+}
+
+/* Слайдер */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 52px;
+    height: 28px;
+}
+
+/* Увеличиваем область клика слайдера */
+.toggle-switch::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    right: -12px;
+    bottom: -12px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+/* Убираем рамку при клике мышью */
+a:focus:not(:focus-visible), 
+button:focus:not(:focus-visible) {
+    outline: none;
 }
