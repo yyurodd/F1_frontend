@@ -86,7 +86,6 @@
 select {
     cursor: pointer;
     appearance: none;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23e10600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>');
     background-repeat: no-repeat;
     background-position: right 15px center;
 }
@@ -200,3 +199,27 @@ select {
     transform: translateX(24px);
 }
 
+/* Стилизация стандартной кнопки выбора файла */
+input[type="file"] {
+    color: #fff;
+    background-color: #3a3a4a;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    width: 100%;
+    cursor: pointer;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+    background-color: #631613;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+input[type="file"]::-webkit-file-upload-button:hover {
+    background-color: #b80500;
+}

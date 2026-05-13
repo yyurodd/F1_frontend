@@ -1,0 +1,311 @@
+/* ============================================
+   СВЕТЛАЯ ТЕМА
+   ============================================ */
+
+   body.light-theme {
+    background-color: #b4c3c5;
+    background-image: none;
+    color: #333;
+}
+
+/* Основной контейнер */
+body.light-theme .content-wrapper {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Шапка */
+body.light-theme header {
+    background: linear-gradient(135deg, #e8e8e8 0%, #d4d4d4 100%);
+    border-left-color: #e10600;
+    border-right-color: #e10600;
+}
+
+body.light-theme header h1 {
+    color: #e10600;
+}
+
+body.light-theme header p {
+    color: #333;
+}
+
+/* Навигация */
+body.light-theme nav {
+    background-color: #e0e0e0;
+}
+
+body.light-theme nav ul li a {
+    color: #333;
+}
+
+body.light-theme nav ul li a:hover {
+    background-color: #e10600;
+    color: white;
+}
+
+/* Заголовки */
+body.light-theme h2 {
+    color: #e10600;
+    border-bottom-color: #e10600;
+}
+
+body.light-theme h3 {
+    color: #e10600;
+}
+
+body.light-theme h4 {
+    color: #e10600;
+}
+
+/* Текст */
+body.light-theme p {
+    color: #333;
+}
+
+/* Сайдбар */
+body.light-theme aside {
+    background: linear-gradient(145deg, #e8e8e8, #d4d4d4);
+    border: 1px solid #e10600;
+    box-shadow: 0 0 20px rgba(225, 6, 0, 0.15);
+}
+
+body.light-theme aside h3,
+body.light-theme aside h4 {
+    color: #e10600;
+}
+
+/* Факты */
+body.light-theme .fact-box {
+    background-color: rgba(225, 6, 0, 0.08);
+    border: 1px solid rgba(225, 6, 0, 0.2);
+}
+
+body.light-theme .fact-box p {
+    color: #333;
+}
+
+body.light-theme .fact-box h3,
+body.light-theme .fact-box h4 {
+    color: #e10600;
+}
+
+/* Карточки легенд */
+body.light-theme .driver-card {
+    background-color: rgba(225, 6, 0, 0.05);
+    box-shadow: 0 0 20px rgba(225, 6, 0, 0.1);
+}
+
+body.light-theme .driver-card h3 {
+    color: #e10600;
+}
+
+body.light-theme .driver-card p {
+    color: #333;
+}
+
+/* Карточки пользователей */
+body.light-theme .user-card {
+    background: rgba(240, 240, 245, 0.95);
+    border-color: #e10600;
+}
+
+body.light-theme .user-card-header {
+    background: rgba(225, 6, 0, 0.08);
+}
+
+body.light-theme .user-card-header h3 {
+    color: #e10600;
+}
+
+body.light-theme .user-card-body p {
+    color: #333;
+}
+
+body.light-theme .user-card-footer {
+    background: rgba(0, 0, 0, 0.05);
+    color: #666;
+}
+
+/* Формы */
+body.light-theme .form-container {
+    background: rgba(240, 240, 245, 0.95);
+    border-color: #e10600;
+}
+
+body.light-theme .form-container h2 {
+    color: #e10600;
+}
+
+body.light-theme .form-group label {
+    color: #333;
+}
+
+body.light-theme .form-group input,
+body.light-theme .form-group select {
+    background: #fff;
+    border-color: #ccc;
+    color: #333;
+}
+
+body.light-theme .form-group input::placeholder {
+    color: #999;
+}
+
+body.light-theme .form-group input:focus,
+body.light-theme .form-group select:focus {
+    border-color: #e10600;
+    box-shadow: 0 0 8px rgba(225, 6, 0, 0.3);
+}
+
+body.light-theme .field-hint {
+    color: #666;
+}
+
+/* Чекбоксы и радио */
+body.light-theme .checkbox-group label,
+body.light-theme .radio-group label {
+    color: #333;
+}
+
+/* Toggle */
+body.light-theme .toggle-label {
+    color: #333;
+}
+
+body.light-theme .toggle-slider {
+    background-color: #c0c0c0;
+}
+
+body.light-theme .toggle-switch input:checked + .toggle-slider {
+    background-color: #e10600;
+}
+
+/* Кнопки */
+body.light-theme .btn-primary {
+    background: #e10600;
+    color: white;
+}
+
+body.light-theme .btn-primary:hover {
+    background: #b80500;
+}
+
+body.light-theme .btn-secondary {
+    background: #3a3a4a;
+    color: white;
+}
+
+body.light-theme .btn-secondary:hover {
+    background: #2a2a3a;
+}
+
+body.light-theme .auth-btn {
+    background: #e10600;
+    color: white;
+}
+
+body.light-theme .auth-btn:hover {
+    background: #b80500;
+}
+
+/* Фокус */
+body.light-theme a:focus-visible,
+body.light-theme button:focus-visible,
+body.light-theme input:focus-visible,
+body.light-theme .btn:focus-visible {
+    outline: 3px solid #e10600;
+    outline-offset: 3px;
+}
+
+/* Ссылки */
+body.light-theme a {
+    color: #e10600;
+}
+
+body.light-theme a:hover {
+    color: #b80500;
+}
+
+body.light-theme .form-link {
+    color: #666;
+}
+
+body.light-theme .form-link a {
+    color: #e10600;
+}
+
+/* Таблицы */
+body.light-theme table {
+    background-color: #f0f0f0;
+}
+
+body.light-theme td {
+    color: #333;
+    border-bottom-color: #ddd;
+}
+
+body.light-theme tr:nth-child(even) {
+    background-color: #e8e8e8;
+}
+
+body.light-theme th {
+    background-color: #e10600;
+    color: white;
+}
+
+/* Списки */
+body.light-theme .custom-list li {
+    color: #333;
+}
+
+body.light-theme .stat-value {
+    color: #e10600;
+}
+
+body.light-theme .highlight-text {
+    color: #e10600;
+    background-color: rgba(225, 6, 0, 0.1);
+}
+
+/* Подвал */
+body.light-theme footer {
+    background: linear-gradient(135deg, #e0e0e0 0%, #cccccc 100%);
+    border-top-color: #e10600;
+}
+
+body.light-theme footer p {
+    color: #555;
+}
+
+body.light-theme footer a {
+    color: #e10600;
+}
+
+/* Информация о пользователе */
+body.light-theme .user-info {
+    background: rgba(225, 6, 0, 0.08);
+    border-color: #e10600;
+}
+
+body.light-theme .user-name-small {
+    color: #e10600;
+}
+
+body.light-theme .logout-btn-small {
+    background: #3a3a4a;
+    color: white;
+}
+
+body.light-theme .logout-btn-small:hover {
+    background: #e10600;
+}
+
+/* Ошибки */
+body.light-theme .error-message {
+    color: #e10600;
+}
+
+/* Превью аватара */
+body.light-theme #previewImg {
+    border-color: #e10600;
+}

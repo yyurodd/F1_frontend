@@ -5,35 +5,22 @@
     <title>Энциклопедия F1 - Регистрация</title>
     <link rel="stylesheet" href="../css/register.css">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/light-theme.css">
 </head>
 <body>
     <div class="content-wrapper">
-        <header>
-            <h1>Энциклопедия Формулы-1</h1>
-            <p>Присоединяйся к сообществу фанатов королевских гонок</p>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Главная</a></li>
-                    <li><a href="teams.html">Команды</a></li>
-                    <li><a href="legends.html">Легенды</a></li>
-                    <li><a href="register.html">Регистрация</a></li>
-                    <li><a href="login.html">Вход</a></li>
-                </ul>
-            </nav>
-            <hr>
-        </header>
+        <div id="header-placeholder"></div>
 
         <main class="form-page-main">
             <div class="form-container">
                 <h2>Регистрация</h2>
                 
-                <form>
+                <form id="registerForm">
                     <!-- Email -->
                     <div class="form-group">
                         <label for="email">Email *</label>
                         <div class="input-wrapper">
                             <input type="email" id="email" name="email" placeholder="example@mail.com" required>
-                            <span class="input-icon"></span>
                         </div>
                         <div class="field-hint">Введите email для входа</div>
                     </div>
@@ -43,7 +30,6 @@
                         <label for="password">Пароль *</label>
                         <div class="input-wrapper">
                             <input type="password" id="password" name="password" placeholder="Минимум 6 символов" required minlength="6">
-                            <span class="input-icon"></span>
                         </div>
                         <div class="field-hint">Пароль должен содержать минимум 6 символов</div>
                     </div>
@@ -53,7 +39,6 @@
                         <label for="confirm_password">Подтвердите пароль *</label>
                         <div class="input-wrapper">
                             <input type="password" id="confirm_password" name="confirm_password" placeholder="Введите пароль еще раз" required minlength="6">
-                            <span class="input-icon"></span>
                         </div>
                     </div>
 
@@ -65,6 +50,17 @@
                     </div>
 
                     <hr>
+
+                    <!-- Аватар -->
+                    <div class="form-group">
+                        <label for="avatar">Аватар</label>
+                        <input type="file" id="avatar" name="avatar" accept="image/jpeg, image/png, image/jpg, image/webp">
+                        <div class="field-hint">Максимальный размер 500×500px, фото будет обрезано до квадрата</div>
+                        <canvas id="avatarCanvas" style="display: none;"></canvas>
+                        <div id="avatarPreview" style="display: none; margin-top: 15px;">
+                            <img id="previewImg" width="100" height="100" style="object-fit: cover; border: 2px solid #e10600;">
+                        </div>
+                    </div>
 
                     <!-- Роль -->
                     <div class="form-group">
@@ -103,7 +99,7 @@
                     <div class="form-group">
                         <div class="toggle-group">
                             <label class="toggle-switch">
-                                <input type="checkbox" name="newsletter" checked>
+                                <input type="checkbox" id="newsletter" name="newsletter" checked>
                                 <span class="toggle-slider"></span>
                             </label>
                             <label class="toggle-label">Получать новости и обновления</label>
@@ -134,11 +130,9 @@
             </div>
         </main>
 
-        <footer>
-            <hr>
-            <p><a href="#top">⬆ Вернуться наверх</a></p>
-            <p>&copy; 2026 Энциклопедия F1. Все права защищены.</p>
-        </footer>
+        <div id="footer-placeholder"></div>
     </div>
+    <script src="../js/components.js"></script>
+    <script src="../js/register.js"></script>
 </body>
 </html>

@@ -1,0 +1,84 @@
+/* Сетка для карточек пользователей (GRID) */
+.users-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* Карточка пользователя (FLEX внутри) */
+.user-card {
+    display: flex;
+    flex-direction: column;
+    background: rgba(42, 42, 58, 0.95);
+    border-radius: 15px;
+    border: 1px solid #e10600;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.user-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(225, 6, 0, 0.3);
+}
+
+/* Шапка карточки (аватар + имя) */
+.user-card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background: rgba(225, 6, 0, 0.1);
+}
+
+.user-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e10600;
+}
+
+.user-avatar-placeholder {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #e10600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: white;
+}
+
+.user-name {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #e10600;
+    margin: 0;
+}
+
+/* Тело карточки */
+.user-card-body {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.user-card-body p {
+    margin: 8px 0;
+    font-size: 0.9em;
+    text-align: left;
+}
+
+.user-card-body .stat-value {
+    font-weight: bold;
+    color: #e10600;
+}
+
+/* Подвал карточки */
+.user-card-footer {
+    padding: 15px 20px;
+    background: rgba(0, 0, 0, 0.2);
+    font-size: 0.8em;
+    color: #999;
+}

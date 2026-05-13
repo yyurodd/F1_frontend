@@ -55,4 +55,28 @@
         vertical-align: top;
     }
 
+    .header-top {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .header-actions {
+        justify-content: center;
+    }
+    
+    .user-info-display {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .header-actions {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+    
+    .theme-toggle-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
 }
