@@ -68,7 +68,7 @@ function clearError(input) {
 }
 
 function validateEmail(email) {
-    const regex = /^[^\s@]+@([^\s@]+\.)+[^\s@]+$/;
+    const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     return regex.test(email);
 }
 
@@ -115,7 +115,7 @@ confirmInput.addEventListener('input', function() {
     }
 });
 
-// ========== ОТПРАВКА ФОРМЫ (РЕГИСТРАЦИЯ) ==========
+// ========== ОТПРАВКА ФОРМЫ  ==========
 const form = document.getElementById('registerForm');
 form.addEventListener('submit', function(e) {
     e.preventDefault();
