@@ -44,11 +44,14 @@ function updateUserDisplay() {
     const authButtons = document.getElementById('authButtons');
     
     if (currentUser && currentUser.email) {
+        const hasAvatar = currentUser.avatar && currentUser.avatar !== '';
+        
         userInfoDiv.innerHTML = `
             <div class="user-info-display">
-                ${currentUser.avatar ? 
-                    `<img src="${currentUser.avatar}" class="user-avatar-small" alt="Аватар">` : 
-                    `<div class="user-avatar-placeholder-small">👤</div>`
+                ${hasAvatar ? 
+                    `<img src="${currentUser.avatar}" class="user-avatar-small" alt="Аватар" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">` : 
+                    `<div class="user-avatar-placeholder-small" style="display: flex;">👤</div>
+                    <div class="user-avatar-placeholder-small" style="display: none;">👤</div>`
                 }
                 <span class="user-name-small">${currentUser.nickname || currentUser.email.split('@')[0]}</span>
                 <button class="logout-btn-small" onclick="logout()">Выйти</button>
@@ -95,6 +98,33 @@ function toggleTheme() {
     if (themeBtn) {
         themeBtn.textContent = isLight ? '☀️' : '🌙';
     }
+}
+
+// список аватарок
+function getAvatarSelectorHTML() {
+    const avatars = [
+        { value: '../templates/avatars/alonso.jpg', alt: 'Алонсо' },
+        { value: '../templates/avatars/ham.png', alt: 'Хэмилтон' },
+        { value: '../templates/avatars/leclerc.jpg', alt: 'Леклер' },
+        { value: '../templates/avatars/vers.png', alt: 'Ферстаппен' },
+        { value: '../templates/avatars/senna.jpg', alt: 'Сенна' },
+        { value: '../templates/avatars/mansel.jpg', alt: 'Мэнсел' },
+        { value: '../templates/avatars/michael.jpg', alt: 'Шумахер' },
+        { value: '../templates/avatars/prost.jpg', alt: 'Прост' }
+    ];
+    
+    return `
+        <div class="avatar-selector-wrapper">
+            <select id="avatarSelect" name="avatar" class="avatar-select">
+                ${avatars.map(avatar => `
+                    <option value="${avatar.value}">${avatar.alt}</option>
+                `).join('')}
+            </select>
+            <div class="avatar-preview" id="avatarPreview">
+                <img id="previewAvatarImg" src="${avatars[0].value}" alt="Предпросмотр аватара">
+            </div>
+        </div>
+    `;
 }
 
 // Ждём загрузки DOM и вешаем обработчик

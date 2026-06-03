@@ -1,41 +1,23 @@
-// аватар
-const avatarInput = document.getElementById('avatar');
-const previewImg = document.getElementById('previewImg');
-const previewDiv = document.getElementById('avatarPreview');
+// Выбор аватара из выпадающего списка
+const avatarSelector = document.getElementById('avatarSelector');
+if (avatarSelector) {
+    avatarSelector.innerHTML = getAvatarSelectorHTML();
+    
+    // Добавляем предпросмотр при выборе
+    const avatarSelect = document.getElementById('avatarSelect');
+    const previewImg = document.getElementById('previewAvatarImg');
+    
+    if (avatarSelect && previewImg) {
+        avatarSelect.addEventListener('change', function() {
+            previewImg.src = this.value;
+        });
+    }
+}
 
-if (avatarInput) {
-    avatarInput.addEventListener('change', function(e) {
-        const file = e.target.files[0];
-        if (!file) return;
-        
-        const img = new Image();
-        const reader = new FileReader();
-        const canvas = document.createElement('canvas');
-        
-        reader.onload = function(event) {
-            img.src = event.target.result;
-        };
-        
-        img.onload = function() {
-            let size = Math.min(img.width, img.height);
-            if (size > 500) size = 500;
-            
-            canvas.width = size;
-            canvas.height = size;
-            
-            const sx = (img.width - size) / 2;
-            const sy = (img.height - size) / 2;
-            const ctx = canvas.getContext('2d');
-            ctx.drawImage(img, sx, sy, size, size, 0, 0, size, size);
-            
-            const avatarDataUrl = canvas.toDataURL('image/jpeg');
-            previewImg.src = avatarDataUrl;
-            previewDiv.style.display = 'block';
-            window.avatarData = avatarDataUrl;
-        };
-        
-        reader.readAsDataURL(file);
-    });
+// Функция для получения выбранного аватара
+function getSelectedAvatar() {
+    const select = document.getElementById('avatarSelect');
+    return select ? select.value : '';
 }
 
 // валидация
@@ -149,7 +131,7 @@ form.addEventListener('submit', function(e) {
             role: document.querySelector('input[name="role"]:checked')?.value,
             team: document.getElementById('team').value,
             newsletter: document.getElementById('newsletter')?.checked,
-            avatar: window.avatarData || '',
+            avatar: getSelectedAvatar(), 
             registeredAt: new Date().toISOString()
         };
         

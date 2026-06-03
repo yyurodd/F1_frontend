@@ -223,3 +223,35 @@ input[type="file"]::-webkit-file-upload-button {
 input[type="file"]::-webkit-file-upload-button:hover {
     background-color: #b80500;
 }
+
+/* Выпадающий список аватарок */
+.avatar-select {
+    width: 100%;
+    padding: 12px 15px;
+    background: #1a1a2e;
+    border: 1px solid #3a3a4a;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.avatar-select:focus {
+    outline: none;
+    border-color: #e10600;
+}
+
+/* Превью аватара */
+.avatar-preview {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.avatar-preview img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #e10600;
+    box-shadow: 0 0 10px rgba(225, 6, 0, 0.3);
+}
