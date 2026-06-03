@@ -1,4 +1,3 @@
-// Шапка сайта
 const headerHTML = `
 <header id="top">
     <div class="header-top">

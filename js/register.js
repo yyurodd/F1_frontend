@@ -1,4 +1,4 @@
-// ========== АВАТАР ==========
+// аватар
 const avatarInput = document.getElementById('avatar');
 const previewImg = document.getElementById('previewImg');
 const previewDiv = document.getElementById('avatarPreview');
@@ -38,7 +38,7 @@ if (avatarInput) {
     });
 }
 
-// ========== ВАЛИДАЦИЯ ==========
+// валидация
 function showError(input, message) {
     const formGroup = input.closest('.form-group');
     let errorDiv = formGroup.querySelector('.error-message');
@@ -73,10 +73,10 @@ function validateEmail(email) {
 }
 
 function validatePassword(password) {
-    return password.length >= 6;
+    return password.length >= 6 && /[A-Z]/.test(password) && /[0-9]/.test(password);
 }
 
-// ========== ПРОВЕРКА ПОЛЕЙ ПРИ ВВОДЕ ==========
+// проверка полей при вводе
 const emailInput = document.getElementById('email');
 emailInput.addEventListener('input', function() {
     if (this.value.length > 0 && !validateEmail(this.value)) {
@@ -115,7 +115,7 @@ confirmInput.addEventListener('input', function() {
     }
 });
 
-// ========== ОТПРАВКА ФОРМЫ  ==========
+// отправка формы
 const form = document.getElementById('registerForm');
 form.addEventListener('submit', function(e) {
     e.preventDefault();

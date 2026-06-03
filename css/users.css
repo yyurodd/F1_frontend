@@ -1,4 +1,4 @@
-/* Сетка для карточек пользователей (GRID) */
+/* Сетка для карточек пользователей */
 .users-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -6,7 +6,7 @@
     margin-top: 30px;
 }
 
-/* Карточка пользователя (FLEX внутри) */
+/* Карточка пользователя */
 .user-card {
     display: flex;
     flex-direction: column;
@@ -22,7 +22,7 @@
     box-shadow: 0 10px 25px rgba(225, 6, 0, 0.3);
 }
 
-/* Шапка карточки (аватар + имя) */
+/* Шапка карточки */
 .user-card-header {
     display: flex;
     align-items: center;

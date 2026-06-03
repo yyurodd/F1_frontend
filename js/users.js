@@ -27,7 +27,6 @@ function loadUsers() {
                 <h3 class="user-name">${user.nickname || user.email.split('@')[0]}</h3>
             </div>
             <div class="user-card-body">
-                <p>📧 ${user.email}</p>
                 <p>🎭 ${user.role === 'fan' ? 'Болельщик' : 'Эксперт'}</p>
                 <p>🏎️ ${user.team || 'Не выбрана'}</p>
                 <p>📰 ${user.newsletter ? 'Подписан на новости' : 'Не подписан'}</p>
